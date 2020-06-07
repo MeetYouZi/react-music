@@ -24,9 +24,9 @@ class Home extends Component {
   }
 
   componentDidMount () {
-    console.log('99999')
     this._getBannerList()
   }
+
   isShow () {
     if(this.state.bannerList.length) {
       return <Banner bannerList={this.state.bannerList}/>

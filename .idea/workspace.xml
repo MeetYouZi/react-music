@@ -2,58 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c25770b-cdad-4ec2-b025-87d16bc1adea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/album.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/artists.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/comment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/music.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/musicList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/mv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/playlist.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/song.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/style/mixins.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/style/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/style/variable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/home/components/banner/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/home/components/banner/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/home/components/search/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/home/components/search/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/home/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/home/store/actionCreators.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/home/store/constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/home/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/home/store/reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/home/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/music/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/music/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actionCreators.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/axios.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/format.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/http.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/lyric.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/song.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/storage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/config-overrides.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,22 +93,34 @@
       <workItem from="1591337115643" duration="1682000" />
       <workItem from="1591459311493" duration="121000" />
       <workItem from="1591459587910" duration="932000" />
-      <workItem from="1591501926839" duration="23813000" />
+      <workItem from="1591501926839" duration="24407000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1591538146260</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1591538146260</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
   <component name="WindowStateProjectService">
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591519676616">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1591519676616" />
-    <state x="312" y="48" key="CommitChangelistDialog2" timestamp="1591460513534">
+    <state x="312" y="48" key="CommitChangelistDialog2" timestamp="1591538145936">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="312" y="48" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1591460513534" />
+    <state x="312" y="48" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1591538145936" />
     <state x="371" y="70" key="SettingsEditor" timestamp="1591526928048">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
