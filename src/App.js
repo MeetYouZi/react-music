@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import store from './store'
 import Music from '@/pages/music'
-import Home from '@/pages/home'
+import Home from '@/pages/home/homeHooks'
 
 function App() {
   return (
