@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c25770b-cdad-4ec2-b025-87d16bc1adea" name="Default Changelist" comment="">
+    <list default="true" id="2c25770b-cdad-4ec2-b025-87d16bc1adea" name="Default Changelist" comment="路由添加 Switch">
+      <change afterPath="$PROJECT_DIR$/src/components/tabNav/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tabNav/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/recommend/index.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/style/mixins.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style/mixins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/style/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style/reset.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/style/variable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style/variable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/components/search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/components/search/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/homeHooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/homeHooks.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/music/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/music/style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,14 +24,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="XSLT Stylesheet" />
         <option value="CSS File" />
+        <option value="XSLT Stylesheet" />
+        <option value="Stylus File" />
         <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -58,7 +71,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="list.type.of.created.stylesheet" value="Stylus" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -68,7 +81,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -93,7 +106,7 @@
       <workItem from="1591337115643" duration="1682000" />
       <workItem from="1591459311493" duration="121000" />
       <workItem from="1591459587910" duration="932000" />
-      <workItem from="1591501926839" duration="24407000" />
+      <workItem from="1591501926839" duration="32499000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1591538146260</created>
@@ -102,7 +115,21 @@
       <option name="project" value="LOCAL" />
       <updated>1591538146260</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init">
+      <created>1591541873753</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1591541873753</updated>
+    </task>
+    <task id="LOCAL-00003" summary="路由添加 Switch">
+      <created>1591544575235</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1591544575235</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,24 +137,29 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="路由添加 Switch" />
+    <option name="LAST_COMMIT_MESSAGE" value="路由添加 Switch" />
   </component>
   <component name="WindowStateProjectService">
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591519676616">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1591519676616" />
-    <state x="312" y="48" key="CommitChangelistDialog2" timestamp="1591538145936">
+    <state x="312" y="48" key="CommitChangelistDialog2" timestamp="1591705812084">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="312" y="48" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1591538145936" />
-    <state x="371" y="70" key="SettingsEditor" timestamp="1591526928048">
+    <state x="312" y="48" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1591705812083" />
+    <state x="371" y="70" key="SettingsEditor" timestamp="1591713758929">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="371" y="70" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1591526928048" />
-    <state x="384" y="207" width="671" height="486" key="find.popup" timestamp="1591536789927">
+    <state x="371" y="70" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1591713758929" />
+    <state x="509" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591707460077">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="384" y="207" width="671" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1591536789927" />
+    <state x="509" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1591707460077" />
+    <state x="384" y="207" width="671" height="486" key="find.popup" timestamp="1591707183989">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="384" y="207" width="671" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1591707183989" />
   </component>
 </project>

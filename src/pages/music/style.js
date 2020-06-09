@@ -2,10 +2,11 @@ import styled from 'styled-components';
 import * as $color from 'style/variable';
 import  * as mixins from 'style/mixins';
 
-export const HeaderWrapper = styled(mixins.noWrap)`
+export const HeaderWrapper = styled.div`
 	z-index: 1;
 	position: relative;
 	height: 56px;
+	${mixins.noWrap()};
 	border-bottom: 1px solid ${$color.$colorBackground};
 `;
 

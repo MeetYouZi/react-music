@@ -1,6 +1,7 @@
 // 颜色定义规范
 export const $colorBackground = '#000'
 export const $searchBg = '#fff'
+export const $colorTheme = '#31c27c'
 
 // const $colorText = '#666';
 //

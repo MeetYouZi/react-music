@@ -5,6 +5,7 @@ import { getBanner } from '@/api'
 import Search from '@/pages/home/components/search'
 import Banner from '@/pages/home/components/banner'
 
+// 已用 hooks 重写
 class Home extends Component {
 
   constructor(props) {
