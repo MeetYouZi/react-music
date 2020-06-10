@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c25770b-cdad-4ec2-b025-87d16bc1adea" name="Default Changelist" comment="路由添加 Switch">
-      <change afterPath="$PROJECT_DIR$/src/components/tabNav/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tabNav/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/recommend/index.styl" afterDir="false" />
+    <list default="true" id="2c25770b-cdad-4ec2-b025-87d16bc1adea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pages/recommend/style.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/style/mixins.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style/mixins.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/style/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style/reset.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/style/variable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style/variable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/components/search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/components/search/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/home/homeHooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/homeHooks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/music/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/music/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/recommend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/recommend/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +18,8 @@
       <list>
         <option value="CSS File" />
         <option value="XSLT Stylesheet" />
-        <option value="Stylus File" />
         <option value="JavaScript File" />
+        <option value="Stylus File" />
       </list>
     </option>
   </component>
@@ -106,7 +98,7 @@
       <workItem from="1591337115643" duration="1682000" />
       <workItem from="1591459311493" duration="121000" />
       <workItem from="1591459587910" duration="932000" />
-      <workItem from="1591501926839" duration="32499000" />
+      <workItem from="1591501926839" duration="36962000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1591538146260</created>
@@ -129,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591544575235</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="添加路由底部导航，style-components 太难了！！！">
+      <created>1591717786260</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1591717786261</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,17 +137,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="路由添加 Switch" />
-    <option name="LAST_COMMIT_MESSAGE" value="路由添加 Switch" />
+    <MESSAGE value="添加路由底部导航，style-components 太难了！！！" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加路由底部导航，style-components 太难了！！！" />
   </component>
   <component name="WindowStateProjectService">
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591519676616">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1591519676616" />
-    <state x="312" y="48" key="CommitChangelistDialog2" timestamp="1591705812084">
+    <state x="318" y="3" key="CommitChangelistDialog2" timestamp="1591717786008">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="312" y="48" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1591705812083" />
+    <state x="318" y="3" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1591717786008" />
     <state x="371" y="70" key="SettingsEditor" timestamp="1591713758929">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

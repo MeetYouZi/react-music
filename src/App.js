@@ -5,6 +5,7 @@ import store from './store'
 import Music from '@/pages/music'
 import Home from '@/pages/home/homeHooks'
 import TabNav from '@/components/tabNav'
+import Recommend from '@/pages/recommend'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Switch>
           <Route path='/' exact component={Home}/>
           <Route path='/music' exact component={Music}/>
+          <Route path='/recommend' exact component={Recommend}/>
         </Switch>
       </BrowserRouter>
     </Provider>

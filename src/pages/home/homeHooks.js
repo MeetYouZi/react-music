@@ -24,7 +24,7 @@ const Home = () => {
 
   useEffect(() => {
     _getBannerList()
-  });
+  }, []);
 
   return (
     <>
