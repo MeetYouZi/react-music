@@ -28,7 +28,7 @@ const TabNav = props => {
       {
         iconList.map((item, index) => {
         return (
-          <NavLink to={item.url} activeClassName="LinkActive" key={index}>
+          <NavLink to={item.url} exact activeClassName="LinkActive" key={index}>
             <TabItem>
               <span className="TabLink">{item.name}</span>
             </TabItem>

@@ -7,3 +7,4 @@ export const $colorTheme = '#31c27c'
 //
 export const $fontSizeSmall = '12px'
 export const $fontSizeMedium = '14px'
+export const $fontSizeLarge = '16px'

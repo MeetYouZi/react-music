@@ -1,8 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-import 'style/reset.css'
+import 'style/theme.css'
 import * as serviceWorker from './serviceWorker'
+
+// 初始化主题
+const themeBg = localStorage.getItem('pomeloReactMusic_themeBg') || 'white'
+document.querySelector('html').className = themeBg
 
 ReactDOM.render(
   <React.StrictMode>

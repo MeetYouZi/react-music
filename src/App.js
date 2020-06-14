@@ -1,22 +1,26 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import store from './store'
-import Music from '@/pages/music'
-import Home from '@/pages/home/homeHooks'
-import TabNav from '@/components/tabNav'
-import Recommend from '@/pages/recommend'
+import { GlobalStyle } from './style'
+const Music = lazy(() => import('@/pages/music'))
+const Home = lazy(() => import('@/pages/home/homeHooks'))
+const TabNav= lazy(() => import('@/components/tabNav'))
+const Recommend = lazy(() => import('@/pages/recommend'))
 
 function App() {
   return (
     <Provider store={store}>
+      <GlobalStyle/>
       <BrowserRouter>
-        <TabNav/>
-        <Switch>
-          <Route path='/' exact component={Home}/>
-          <Route path='/music' exact component={Music}/>
-          <Route path='/recommend' exact component={Recommend}/>
-        </Switch>
+        <Suspense fallback={<div>loading</div>}>
+          <TabNav/>
+          <Switch>
+            <Route path='/' exact component={Home}/>
+            <Route path='/music' exact component={Music}/>
+            <Route path='/recommend' exact component={Recommend}/>
+          </Switch>
+        </Suspense>
       </BrowserRouter>
     </Provider>
   )
