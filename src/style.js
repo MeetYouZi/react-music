@@ -18,7 +18,6 @@ export const GlobalStyle = createGlobalStyle`
 		padding: 0;
 		border: 0;
 		font-size: 100%;
-		font: inherit;
 		vertical-align: baseline;
 	}
 	/* HTML5 display-role reset for older browsers */
@@ -28,6 +27,9 @@ export const GlobalStyle = createGlobalStyle`
 	}
 	body {
 		line-height: 1;
+		font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 	}
 	ol, ul {
 		list-style: none;

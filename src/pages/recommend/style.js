@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import * as $color from 'style/variable'
+import * as variable from 'style/variable'
 import  * as mixins from 'style/mixins'
 
 export const RankList = styled.div`
@@ -7,7 +7,7 @@ export const RankList = styled.div`
 `;
 
 export const RankTitle = styled.div`
-	font-size: ${$color.$fontSizeLarge};
+	font-size: ${variable.$fontSizeLarge};
   font-weight: bold;
   padding: 0 0 10px 16px;
   color: #4a4a4a;
@@ -37,6 +37,7 @@ export const RankListTop = styled.div`
           margin: 0 12px 4px;
           line-height: 16px;
           color: var(--c_txt3);
+          font-size: ${variable.$fontSizeMedium};
           ${mixins.noWrap()}
         }
       }
