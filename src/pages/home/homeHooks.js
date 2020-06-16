@@ -7,7 +7,7 @@ import Search from '@/pages/home/components/search'
 import Banner from '@/pages/home/components/banner'
 import ContentView from '@/pages/home/components/contentView'
 
-const Home = () => {
+const Home = (props) => {
   const [ bannerList, setBannerList ] = useState([])
   const [ musicList, setMusicList ] = useState([])
   const [ songList, setSongList ] = useState([])
@@ -16,7 +16,7 @@ const Home = () => {
     key: 'hot',
     name: '热门推荐'
   }, {
-    key: 'music',
+    key: 'musicList',
     name: '最新音乐'
   }, {
     key: 'mv',
@@ -54,7 +54,7 @@ const Home = () => {
         musicArr.push({
           key: titList[index].key,
           tit: titList[index].name,
-          id: 'music' + index,
+          id: 'musicList' + index,
           list: item
         })
       })
@@ -110,7 +110,6 @@ const Home = () => {
       <Search/>
       {isShow()}
       <ContentView musicList={musicList}/>
-      <div>home1111</div>
     </>
   )
 

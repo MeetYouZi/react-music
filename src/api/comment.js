@@ -3,7 +3,7 @@ import axios from '@/utils/http'
 // 歌曲评论
 export const getSongComment = params =>
   axios.request({
-    url: '/comment/music',
+    url: '/comment/musicList',
     method: 'get',
     params
   })

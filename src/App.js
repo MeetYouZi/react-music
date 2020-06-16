@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import store from './store'
 import { GlobalStyle } from './style'
-const Music = lazy(() => import('@/pages/music'))
+const MusicList = lazy(() => import('@/pages/musicList'))
 const Home = lazy(() => import('@/pages/home/homeHooks'))
 const TabNav= lazy(() => import('@/components/tabNav'))
 const Recommend = lazy(() => import('@/pages/recommend'))
@@ -17,7 +17,7 @@ function App() {
           <TabNav/>
           <Switch>
             <Route path='/' exact component={Home}/>
-            <Route path='/music' exact component={Music}/>
+            <Route path='/musicList/:id' exact component={MusicList}/>
             <Route path='/recommend' exact component={Recommend}/>
           </Switch>
         </Suspense>
