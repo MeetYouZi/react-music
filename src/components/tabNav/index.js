@@ -1,4 +1,4 @@
-import React, {} from 'react'
+import React from 'react'
 import { NavLink, withRouter } from 'react-router-dom'
 import {TabItem, TabWrapper} from '@/components/tabNav/style'
 

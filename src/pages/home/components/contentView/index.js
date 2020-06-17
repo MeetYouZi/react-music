@@ -11,7 +11,7 @@ import { getImgUrl } from '@/utils/format'
 const ContentView = props => {
   const { musicList } = props
 
-  const history = useHistory
+  const history = useHistory()
 
   const _getImgUrl = (url, w, h) => {
     return getImgUrl(url, w, h)

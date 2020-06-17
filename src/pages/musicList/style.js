@@ -1,20 +1,29 @@
 import styled from 'styled-components'
-import * as $color from 'style/variable'
+import * as variable from 'style/variable'
 import  * as mixins from 'style/mixins'
 
-export const HeaderWrapper = styled.div`
-	z-index: 1;
+export const TopWrap = styled.div`
 	position: relative;
-	height: 56px;
-	${mixins.noWrap()};
-	border-bottom: 1px solid ${$color.$colorBackground};
+  height: 236px;
+  overflow: hidden;
+  .top_wrap_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
 `;
 
-export const Logo = styled.div`
-  width: 80px;
-  height: 100px;
-  border: 1px solid #444;
-  background: ${$color.$colorBackground};
+export const OptBox = styled.div`
+  position: relative;
+  z-index: 10;
+  margin: -4px 16px 12px;
+  border-radius: 2px;
+  background: var(--searchBg);
+  box-shadow: 0 0 12px 0 rgba(0,0,0,.06);
 `
 
 
