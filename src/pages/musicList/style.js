@@ -15,7 +15,7 @@ export const TopWrap = styled.div`
     height: 100%;
     object-fit: cover;
     }
-`;
+`
 
 export const OptBox = styled.div`
   position: relative;

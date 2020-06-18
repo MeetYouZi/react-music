@@ -38,18 +38,18 @@ const ContentView = props => {
                       <li className="list-item fade"
                         key={item.id}
                         onClick={() => handleClick(musicItem, item, index)}>
-                      <div className="list-box">
-                        <div className="list-media">
-                          <img className="list-img" src={_getImgUrl(item.picUrl, 120)}/>
-                          <div className="cover_count">
-                            <span className="cover-count-num">{item.playCount}</span>
+                        <div className="list-box">
+                          <div className="list-media">
+                            <img className="list-img" src={_getImgUrl(item.picUrl, 120)}/>
+                            <div className="cover_count">
+                              <span className="cover-count-num">{item.playCount}</span>
+                            </div>
+                          </div>
+                          <div className="list-bd">
+                            {item.name}
                           </div>
                         </div>
-                        <div className="list-bd">
-                          {item.name}
-                        </div>
-                      </div>
-                    </li>
+                      </li>
                     )}
                   )}
                 </ul>

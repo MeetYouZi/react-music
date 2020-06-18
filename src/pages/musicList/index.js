@@ -9,7 +9,7 @@ import {OptBox, TopWrap} from './style'
 const Music = props => {
   const [playInfo, setPlayInfo] = useState({})
   const [songList, setSongList] = useState([])
-  let { id } = useParams();
+  let { id } = useParams()
   const MAXLENGTH = 100
 
   const _getListDetail = () => {
