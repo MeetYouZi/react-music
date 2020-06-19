@@ -11,21 +11,18 @@ import ProgressBar from '@/components/progress/progressBar'
 const PlaySong = () => {
 
   let { id } = useParams()
-  const [songList, setSongList] = useState([])
-  const [songs, setSongs] = useState({})
-  const [commentList, setCommentList] = useState([])
-  const [hotCommentList, setHotCommentList] = useState([])
-  const [lyric, setLyric] = useState([])
-  const [nolyric, setNolyric] = useState(false)
+  const [ songList, setSongList ] = useState([])
+  const [ songs, setSongs ] = useState({})
+  const [ commentList, setCommentList ] = useState([])
+  const [ hotCommentList, setHotCommentList ] = useState([])
+  const [ lyric, setLyric ] = useState([])
+  const [ nolyric, setNolyric ] = useState(false)
+
+  let percent = 0.8
 
   useEffect( () => {
     _getSongDetail(id)
-  }, [id])
-  useEffect( () => {
     _getCommentList(id)
-  }, [id])
-
-  useEffect( () => {
     _getLyric(id)
   }, [id])
 
@@ -68,6 +65,10 @@ const PlaySong = () => {
     })
   }
 
+  const percentChange = () => {
+
+  }
+
   return (
     <SongWrap>
       <MainContent>
@@ -86,7 +87,10 @@ const PlaySong = () => {
           }
           <Lyric lyric={lyric} nolyric={nolyric}/>
         </div>
-        <ProgressBar></ProgressBar>
+        <ProgressBar
+          percentChange={percentChange}
+          percent={percent}
+        ></ProgressBar>
 
       </MainContent>
     </SongWrap>
