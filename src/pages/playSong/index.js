@@ -5,6 +5,7 @@ import formatSongs from '@/utils/song'
 import { connect } from 'react-redux'
 import { useParams, withRouter } from 'react-router-dom'
 import { SongWrap, MainContent, ImageBg } from './style'
+import Lyric from './components/lyric'
 
 const PlaySong = () => {
 
@@ -72,7 +73,19 @@ const PlaySong = () => {
         <ImageBg>
           <img className="bg_img" src={songs.image}/>
         </ImageBg>
-        这里是歌词详情页
+        <div className="main_wrap">
+          <div className="song_info">
+            <h1 className="song_name">{songs.name}</h1>
+            <h1 className="sing_name">{songs.singer}</h1>
+          </div>
+          {
+            nolyric ? <div className="imgBox">
+              <img className="bg_img_cover" src={songs.image}/>
+            </div> : ''
+          }
+          <Lyric lyric={lyric} nolyric={nolyric}/>
+        </div>
+
       </MainContent>
     </SongWrap>
   )

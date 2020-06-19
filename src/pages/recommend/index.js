@@ -17,7 +17,6 @@ const Recommend = (props) => {
         }
       })
       setTopList(toplist)
-      console.log(toplist, 'topList')
       // const globalTopList = res.list.filter(item => {
       //   if (!item.ToplistType) {
       //     return item

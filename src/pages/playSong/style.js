@@ -1,9 +1,6 @@
 import styled from 'styled-components'
-import * as variable from 'style/variable'
 import  * as mixins from 'style/mixins'
-import {$fontSizeSmall} from 'style/variable'
-import {$fontSizeMedium} from 'style/variable'
-import {$fontSizeLarge} from 'style/variable'
+import {$fontSizeSmall, $fontSizeMedium, $fontSizeLarge} from 'style/variable'
 
 export const SongWrap = styled.div`
 	background: var(--color_white);
