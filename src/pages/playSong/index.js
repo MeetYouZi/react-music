@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { useParams, withRouter } from 'react-router-dom'
 import { SongWrap, MainContent, ImageBg } from './style'
 import Lyric from './components/lyric'
+import ProgressBar from '@/components/progress/progressBar'
 
 const PlaySong = () => {
 
@@ -85,6 +86,7 @@ const PlaySong = () => {
           }
           <Lyric lyric={lyric} nolyric={nolyric}/>
         </div>
+        <ProgressBar></ProgressBar>
 
       </MainContent>
     </SongWrap>
