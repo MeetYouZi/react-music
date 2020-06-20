@@ -75,7 +75,8 @@ const ProgressBar = props => {
   return (
     <ProgressBarWrap>
       <BarInner ref={progressBar} onClick={progressClick}>
-        <div className={activeBar ? 'progress activeBar': 'progress'} ref={progress}></div>
+        <div className={activeBar ? 'progress activeBar': 'progress'}
+             ref={progress}></div>
         <div className="progress-btn-wrapper"
              ref={progressBtn}
              onTouchStart={progressTouchStart}

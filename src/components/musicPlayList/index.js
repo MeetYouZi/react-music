@@ -1,20 +1,28 @@
 import React from 'react'
 import { formatTime } from '@/utils/utils'
-import { useHistory } from 'react-router-dom'
+import {useHistory, withRouter} from 'react-router-dom'
+import  * as actionCreators from '@/store/actionCreators'
 import { MusicContentList, MusicItem } from './style'
+import {connect} from 'react-redux'
 
 const MusicPlayList = props => {
   const { musicList } = props
+  const { setPlayList } = props
 
   const history = useHistory()
+
+  const handlePlayItem = (musicList, index, id) => {
+    setPlayList(musicList)
+    history.push(`/playSong/${id}`)
+  }
 
   return (
     <MusicContentList>
       {
-        musicList.map(item => {
+        musicList.map((item, index) => {
           return (
             <MusicItem key={item.id}
-                       onClick={() => {history.push(`/playSong/${item.id}`)}}
+                       onClick={() => handlePlayItem(musicList, index, item.id)}
             >
               <div className="item-box">
                 <div className="list-content">
@@ -31,4 +39,14 @@ const MusicPlayList = props => {
   )
 }
 
-export default MusicPlayList
+const mapStateToProps = (state) => ({
+
+})
+
+const mapDispatchToProps = (dispatch) => ({
+  setPlayList(musicList) {
+    dispatch(actionCreators.setPlayList(musicList));
+  }
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(MusicPlayList))

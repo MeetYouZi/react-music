@@ -10,9 +10,10 @@ const defaultState = {
 }
 
 // 设置当前播放列表
-function playList(playList = defaultState.playList, action) {
+const playList = (playList = defaultState.playList, action) => {
   switch (action.type) {
     case constants.SET_PLAYLIST:
+      console.log('action.type', action.type)
       return action.playList
     default:
       return playList
@@ -20,9 +21,9 @@ function playList(playList = defaultState.playList, action) {
 }
 
 // 设置当前播放列表
-function currentSong(
+const currentSong = (
   playList = defaultState.playList,
-  currentIndex = defaultState.currentIndex) {
+  currentIndex = defaultState.currentIndex) => {
   return playList[currentIndex] || {}
 }
 
