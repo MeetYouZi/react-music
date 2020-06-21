@@ -7,6 +7,10 @@ export function setCurrentIndex(currentIndex) {
 
 // 设置当前播放列表
 export function setPlayList(playList) {
-  console.log('setPlayList')
   return { type: constants.SET_PLAYLIST, playList }
+}
+
+// 设置当前播放列表
+export function setCurrentSong(currentSong) {
+  return { type: constants.SET_CURRENTSONG, currentSong }
 }
