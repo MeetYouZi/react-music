@@ -7,13 +7,14 @@ import {connect} from 'react-redux'
 
 const MusicPlayList = props => {
   const { musicList } = props
-  const { setPlayList, setCurrentIndex, setCurrentSong } = props
+  const { setPlayList, setCurrentIndex, setCurrentSong, setPlayingState } = props
 
   const history = useHistory()
 
   const handlePlayItem = (musicList, index, id) => {
     setPlayList(musicList)
     setCurrentIndex(index)
+    setPlayingState(true)
     let song = musicList[index]
     setCurrentSong(song)
     history.push(`/playSong/${id}`)
@@ -48,7 +49,7 @@ const mapStateToProps = (state) => ({
 
 // 将 Dispatch 挂载到 props 上
 const mapDispatchToProps = (dispatch) => ({
-  setPlayList(musicList) {
+  setPlayList (musicList) {
     dispatch(actionCreators.setPlayList(musicList));
   },
   setCurrentIndex (index) {
@@ -56,6 +57,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   setCurrentSong (song) {
     dispatch(actionCreators.setCurrentSong(song))
+  },
+  setPlayingState (data) {
+    dispatch(actionCreators.setPlayingState(data))
   }
 })
 

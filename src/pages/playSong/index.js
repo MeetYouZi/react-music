@@ -20,6 +20,10 @@ const PlaySong = () => {
 
   let percent = 0.8
 
+  useEffect(() => {
+
+  }, [])
+
   useEffect( () => {
     _getSongDetail(id)
     _getCommentList(id)

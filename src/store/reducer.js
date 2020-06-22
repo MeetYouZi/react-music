@@ -6,7 +6,9 @@ import { reducer as homeReducer } from '@/pages/home/store'
 const defaultState = {
   playList: [],
   currentIndex: -1,
-  currentSong: {}
+  currentSong: {},
+  playing: false,
+  audioELE: null
 }
 
 // 设置当前播放列表
@@ -38,12 +40,34 @@ const currentSong =(currentSong = defaultState.currentSong, action) => {
   }
 }
 
+// 设置当前播放歌曲
+const playing =(playing = defaultState.playing, action) => {
+  switch (action.type) {
+    case constants.SET_PLAYINGSTATE:
+      return action.playing
+    default:
+      return playing
+  }
+}
+
+// 设置当前播放歌曲
+const audioELE =(audioELE = defaultState.audioELE, action) => {
+  switch (action.type) {
+    case constants.SET_AUDIOELE:
+      return action.audioELE
+    default:
+      return audioELE
+  }
+}
+
 // combineReducers 管理整个store数据，
 const reducer = combineReducers({
   playList,
   currentIndex,
   currentSong,
+  playing,
+  audioELE,
   home: homeReducer
-});
+})
 
-export default reducer;
+export default reducer

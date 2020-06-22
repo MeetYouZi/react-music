@@ -14,3 +14,14 @@ export function setPlayList(playList) {
 export function setCurrentSong(currentSong) {
   return { type: constants.SET_CURRENTSONG, currentSong }
 }
+
+// 设置当前播放状态
+export function setPlayingState(playing) {
+  return { type: constants.SET_PLAYINGSTATE, playing }
+}
+
+
+// 设置当前播放状态
+export function setAudioELE(audioELE) {
+  return { type: constants.SET_AUDIOELE, audioELE }
+}
