@@ -4,8 +4,9 @@ import  * as actionCreators from '@/store/actionCreators'
 import { PlayerWarp } from './style'
 import { withRouter } from 'react-router-dom'
 import ProgressBar from '@/components/progress/progressBar'
+import MiniPlayer from './miniPlayer'
 
-const MiniPlayer = props => {
+const Player = props => {
   const [ currentTime, setCurrentTime ] = useState(0)
   const [ duration, setDuration ] = useState(0)
   const { currentSong, playing, currentIndex, playList } = props
@@ -53,6 +54,7 @@ const MiniPlayer = props => {
   return (
     <PlayerWarp>
       <ProgressBar percent={percent}/>
+      <MiniPlayer percent={percent}/>
       <audio
         ref={audioRef}
         onTimeUpdate={updateTime}
@@ -83,4 +85,4 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(MiniPlayer))
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Player))

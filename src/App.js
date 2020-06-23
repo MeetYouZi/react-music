@@ -3,7 +3,8 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import store from './store'
 import { GlobalStyle } from './style'
-import MiniPlayer from '@/components/player'
+import { IconStyle } from '@/assets/style/iconfont'
+import Player from '@/components/player'
 const MusicList = lazy(() => import('@/pages/musicList'))
 const Home = lazy(() => import('@/pages/home/homeHooks'))
 const TabNav= lazy(() => import('@/components/tabNav'))
@@ -14,6 +15,7 @@ function App() {
   return (
     <Provider store={store}>
       <GlobalStyle/>
+      <IconStyle/>
       <BrowserRouter>
         <Suspense fallback={<div>loading</div>}>
           <TabNav/>
@@ -23,7 +25,7 @@ function App() {
             <Route path='/recommend' exact component={Recommend}/>
             <Route path='/playSong/:id' exact component={PlaySong}/>
           </Switch>
-          <MiniPlayer></MiniPlayer>
+          <Player></Player>
         </Suspense>
       </BrowserRouter>
     </Provider>
