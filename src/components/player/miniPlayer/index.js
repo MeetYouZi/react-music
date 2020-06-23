@@ -10,25 +10,21 @@ const MiniPlayer = props => {
 
   const radius = 30
   const { playing, currentSong } = props
+  const { setPlayingState } = props
   const { percent } = props
   const miniWrapper = useRef()
   const miniImage = useRef()
 
-  let cdCls = playing ? '' : 'pause'
-  let miniIcon = playing ? 'iconpause1' : 'iconplay'
-
-  const togglePlaying = () => {
-
+  const togglePlaying = (data) => {
+    setPlayingState(data)
   }
-
 
   return (
     <PomeloPlay>
       <Icon>
         <div className="imgWrapper" ref={miniWrapper}>
           <img ref={miniImage}
-               className="play"
-               className={cdCls}
+               className={`play ${playing ? '' : ' pause'}`}
                width="44"
                height="44"
                src={`${currentSong.image}?param=100y100`}
@@ -42,10 +38,11 @@ const MiniPlayer = props => {
       <Control>
         <div className="progress-circle-box">
           <ProgressCircle radius={radius} percent={percent}>
-            <i onClick={togglePlaying}
-               className="iconfont icon-mini"
-               className={miniIcon}
-            ></i>
+            { playing ? <i onClick={() => togglePlaying(false)}
+                           className="icon-mini iconfont"
+            >&#xe98f;</i> : <i onClick={() => togglePlaying(true)}
+                               className="icon-mini iconfont"
+            >&#xe689;</i>}
           </ProgressCircle>
         </div>
       </Control>
@@ -61,6 +58,9 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
+  setPlayingState (data) {
+    dispatch(actionCreators.setPlayingState(data))
+  }
 
 })
 

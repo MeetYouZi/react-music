@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import store from './store'
 import { GlobalStyle } from './style'
-import { IconStyle } from '@/assets/style/iconfont'
+import { IconStyle } from 'style/iconfonts/iconfont'
 import Player from '@/components/player'
 const MusicList = lazy(() => import('@/pages/musicList'))
 const Home = lazy(() => import('@/pages/home/homeHooks'))

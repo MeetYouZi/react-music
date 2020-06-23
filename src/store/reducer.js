@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 import * as constants from './constants'
 import { reducer as homeReducer } from '@/pages/home/store'
+import {default} from 'react-redux/lib/utils/Subscription'
 
 // 初始数据
 const defaultState = {
@@ -16,7 +17,8 @@ const defaultState = {
     url: 'https://music.163.com/song/media/outer/url?id=1371353582.mp3'
   },
   playing: false,
-  audioELE: null
+  audioELE: null,
+  currentTime: 0
 }
 
 // 设置当前播放列表
@@ -39,7 +41,7 @@ const currentIndex = (currentIndex = defaultState.currentIndex, action) => {
 }
 
 // 设置当前播放歌曲
-const currentSong =(currentSong = defaultState.currentSong, action) => {
+const currentSong = (currentSong = defaultState.currentSong, action) => {
   switch (action.type) {
     case constants.SET_CURRENTSONG:
       return action.currentSong
@@ -49,7 +51,7 @@ const currentSong =(currentSong = defaultState.currentSong, action) => {
 }
 
 // 设置当前播放歌曲
-const playing =(playing = defaultState.playing, action) => {
+const playing = (playing = defaultState.playing, action) => {
   switch (action.type) {
     case constants.SET_PLAYINGSTATE:
       return action.playing
@@ -59,12 +61,21 @@ const playing =(playing = defaultState.playing, action) => {
 }
 
 // 设置当前播放歌曲
-const audioELE =(audioELE = defaultState.audioELE, action) => {
+const audioELE = (audioELE = defaultState.audioELE, action) => {
   switch (action.type) {
     case constants.SET_AUDIOELE:
       return action.audioELE
     default:
       return audioELE
+  }
+}
+
+const currentTime = (currentTime = defaultState.currentTime, action) => {
+  switch (action.type) {
+    case constants.SET_CURRENTTIME:
+      return action.currentTime
+    default:
+      return currentTime
   }
 }
 
@@ -75,6 +86,7 @@ const reducer = combineReducers({
   currentSong,
   playing,
   audioELE,
+  currentTime,
   home: homeReducer
 })
 

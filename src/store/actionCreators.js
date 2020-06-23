@@ -19,9 +19,12 @@ export function setCurrentSong(currentSong) {
 export function setPlayingState(playing) {
   return { type: constants.SET_PLAYINGSTATE, playing }
 }
-
-
 // 设置当前播放状态
 export function setAudioELE(audioELE) {
   return { type: constants.SET_AUDIOELE, audioELE }
+}
+
+// 设置当前播放状态
+export function setCurrentTime(currentTime) {
+  return { type: constants.SET_CURRENTTIME, currentTime }
 }
