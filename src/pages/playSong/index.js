@@ -7,10 +7,16 @@ import { useParams, withRouter } from 'react-router-dom'
 import { SongWrap, MainContent, ImageBg } from './style'
 import Lyric from './components/lyric'
 import ProgressBar from '@/components/progress/progressBar'
+import * as actionCreators from '@/store/actionCreators'
 
-const PlaySong = () => {
+const PlaySong = props => {
 
   let { id } = useParams()
+
+  const { audioELE, currentSong, playing, currentTime } = props
+  const { setPlayingState, setCurrentTime } = props
+
+  const [ duration, setDuration ] = useState(0)
   const [ songList, setSongList ] = useState([])
   const [ songs, setSongs ] = useState({})
   const [ commentList, setCommentList ] = useState([])
@@ -18,11 +24,12 @@ const PlaySong = () => {
   const [ lyric, setLyric ] = useState([])
   const [ nolyric, setNolyric ] = useState(false)
 
-  let percent = 0.8
+  let percent = isNaN(currentTime / duration) ? 0 : currentTime / duration
 
   useEffect(() => {
-
-  }, [])
+    setDuration(currentSong.duration)
+    audioELE.current.src = currentSong.url
+  }, [currentSong])
 
   useEffect( () => {
     _getSongDetail(id)
@@ -69,8 +76,13 @@ const PlaySong = () => {
     })
   }
 
-  const percentChange = () => {
-
+  const percentChange = curPercent => {
+    const newTime = curPercent * duration
+    setCurrentTime(newTime)
+    audioELE.current.currentTime = newTime
+    if (!playing) {
+      setPlayingState(true)
+    }
   }
 
   return (
@@ -103,11 +115,20 @@ const PlaySong = () => {
 }
 
 const mapStateToProps = (state) => ({
-
+  audioELE: state.audioELE,
+  currentSong: state.currentSong,
+  playing: state.playing,
+  currentTime: state.currentTime
 })
 
 const mapDispatchToProps = (dispatch) => ({
+  setPlayingState(data) {
+    dispatch(actionCreators.setPlayingState(data))
+  },
 
+  setCurrentTime(current_time) {
+    dispatch(actionCreators.setCurrentTime(current_time))
+  }
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(PlaySong))

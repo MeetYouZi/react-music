@@ -66,7 +66,7 @@ const Player = props => {
 
   return (
     <PlayerWarp>
-      <ProgressBar percent={percent} percentChange={percentChange}/>
+      {/*<ProgressBar percent={percent} percentChange={percentChange}/>*/}
       <MiniPlayer percent={percent}/>
       <audio
         ref={audioRef}

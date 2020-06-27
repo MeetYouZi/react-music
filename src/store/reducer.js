@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
 import * as constants from './constants'
 import { reducer as homeReducer } from '@/pages/home/store'
-import {default} from 'react-redux/lib/utils/Subscription'
 
 // 初始数据
 const defaultState = {

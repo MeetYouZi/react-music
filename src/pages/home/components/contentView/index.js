@@ -41,9 +41,10 @@ const ContentView = props => {
                         <div className="list-box">
                           <div className="list-media">
                             <img className="list-img" src={_getImgUrl(item.picUrl, 120)}/>
-                            <div className="cover_count">
-                              <span className="cover-count-num">{item.playCount}</span>
-                            </div>
+                              {
+                                item.playCount ? <div className="cover_count"><span className="cover-count-num">
+                                  { item.playCount / 10000 }万</span></div> : ''
+                              }
                           </div>
                           <div className="list-bd">
                             {item.name}

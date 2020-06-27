@@ -60,7 +60,7 @@ export const Text = styled.div`
     margin-right: 4px;
   }
   .desc {
-    no-wrap();
+    ${noWrap()};
     font-size: ${$fontSizeSmall};
     color: var(--c_txt2);
   }
