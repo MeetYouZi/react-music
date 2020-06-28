@@ -4,15 +4,23 @@ import {withRouter} from 'react-router-dom'
 import * as actionCreators from '@/store/actionCreators'
 
 // 编写我们自己Hook，名字以use开头
-const usePlayer = (props) => {
-  const { audioELE, currentSong, playing, currentTime } = props
-  const { setPlayingState, setCurrentTime } = props
+const usePlayer = (initialValue) => {
+  const [count, changeCount] = useState(initialValue)
 
-  const [ duration, setDuration ] = useState(0)
-  let percent = isNaN(currentTime / duration) ? 0 : currentTime / duration
+  const decrease = () => {
+    changeCount(count - 1)
+  };
+
+  const increase = () => {
+    changeCount(count + 1)
+  };
+
+  const resetCounter = () => {
+    changeCount(0)
+  };
 
   // 返回包含了更多逻辑的 state 以及改变 state 方法的钩子
-  return [percent, audioELE, currentSong, playing, currentTime, setPlayingState, setCurrentTime]
+  return [count, { decrease, increase, resetCounter }]
 }
 
 const mapStateToProps = (state) => ({

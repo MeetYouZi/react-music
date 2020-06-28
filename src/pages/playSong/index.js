@@ -14,8 +14,8 @@ const PlaySong = props => {
 
   let { id } = useParams()
 
-  // const { audioELE, currentSong, playing, currentTime } = props
-  // const { setPlayingState, setCurrentTime } = props
+  const { audioELE, currentSong, playing, currentTime } = props
+  const { setPlayingState, setCurrentTime } = props
 
   const [ duration, setDuration ] = useState(0)
   const [ songList, setSongList ] = useState([])
@@ -25,9 +25,10 @@ const PlaySong = props => {
   const [ lyric, setLyric ] = useState([])
   const [ nolyric, setNolyric ] = useState(false)
   // 自定义组件
-  const [percent, audioELE, currentSong, playing, currentTime, setPlayingState, setCurrentTime] = usePlayer(props)
+  const [count, controlCount] = usePlayer(10)
+  console.log()
 
-  // let percent = isNaN(currentTime / duration) ? 0 : currentTime / duration
+  let percent = isNaN(currentTime / duration) ? 0 : currentTime / duration
 
   useEffect(() => {
     setDuration(currentSong.duration)
@@ -118,20 +119,20 @@ const PlaySong = props => {
 }
 
 const mapStateToProps = (state) => ({
-  // audioELE: state.audioELE,
-  // currentSong: state.currentSong,
-  // playing: state.playing,
-  // currentTime: state.currentTime
+  audioELE: state.audioELE,
+  currentSong: state.currentSong,
+  playing: state.playing,
+  currentTime: state.currentTime
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  // setPlayingState(data) {
-  //   dispatch(actionCreators.setPlayingState(data))
-  // },
-  //
-  // setCurrentTime(current_time) {
-  //   dispatch(actionCreators.setCurrentTime(current_time))
-  // }
+  setPlayingState(data) {
+    dispatch(actionCreators.setPlayingState(data))
+  },
+
+  setCurrentTime(current_time) {
+    dispatch(actionCreators.setCurrentTime(current_time))
+  }
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(PlaySong))
