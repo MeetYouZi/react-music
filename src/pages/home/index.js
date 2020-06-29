@@ -55,4 +55,5 @@ const mapDispatchToProps = (dispatch) => ({
 
 })
 
+// 高阶组件中的 withRouter, 作用是将一个组件包裹进 Route 里面, 然后 react-router 的三个对象 history, location, match 就会被放进这个组件的 props 属性中.
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Home))

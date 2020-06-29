@@ -3,8 +3,11 @@ import { PomeloPlay, Icon, Text, Control } from './style'
 import * as actionCreators from "@/store/actionCreators"
 import ProgressCircle from '@/components/progress/progressCircle'
 import { connect } from "react-redux"
+import { useHistory } from 'react-router-dom'
 
 const MiniPlayer = props => {
+
+  const history = useHistory()
 
   const radius = 30
   const { playing, currentSong } = props
@@ -19,7 +22,7 @@ const MiniPlayer = props => {
 
   return (
     <PomeloPlay>
-      <Icon>
+      <Icon onClick={() => { history.push(`/playSong/${currentSong.id}`) }}>
         <div className="imgWrapper" ref={miniWrapper}>
           <img ref={miniImage}
                className={`play ${playing ? '' : ' pause'}`}
@@ -29,7 +32,7 @@ const MiniPlayer = props => {
           />
         </div>
       </Icon>
-      <Text>
+      <Text onClick={() => { history.push(`/musicList/${currentSong.id}`) }}>
         <h2 className="name">{currentSong.name}</h2>
         <p className="desc">{currentSong.Singer}</p>
       </Text>

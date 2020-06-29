@@ -63,7 +63,6 @@ const ProgressBar = props => {
   }
 
   const progressClick = (e) => {
-    console.log(e, 'e')
     // Element.getBoundingClientRect() 方法返回元素的大小及其相对于视口的位置。
     const rect = progressBar.current.getBoundingClientRect()
     const offsetWidth = e.pageX - rect.left
