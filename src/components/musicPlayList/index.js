@@ -1,6 +1,6 @@
 import React from 'react'
 import { formatTime } from '@/utils/utils'
-import {useHistory, withRouter} from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import  * as actionCreators from '@/store/actionCreators'
 import { MusicContentList, MusicItem } from './style'
 import {connect} from 'react-redux'
@@ -63,4 +63,4 @@ const mapDispatchToProps = (dispatch) => ({
   }
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(MusicPlayList))
+export default connect(mapStateToProps, mapDispatchToProps)(React.memo(MusicPlayList))

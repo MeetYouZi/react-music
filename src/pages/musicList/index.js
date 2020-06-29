@@ -55,4 +55,4 @@ const mapDispatchToProps = (dispatch) => ({
 
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Music))
+export default connect(mapStateToProps, mapDispatchToProps)(React.memo(Music))

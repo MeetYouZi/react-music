@@ -102,5 +102,5 @@ const mapDispatchToProps = (dispatch) => ({
   }
 })
 
-
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Player))
+// React.memo 会检查接下来的渲染是否与前一次的渲染相同，如果两者是一样的，那么就会保留上一次的渲染结果
+export default connect(mapStateToProps, mapDispatchToProps)(React.memo(Player))

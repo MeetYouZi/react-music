@@ -40,4 +40,4 @@ const TabNav = props => {
   )
 }
 
-export default withRouter(TabNav)
+export default React.memo(withRouter(TabNav))

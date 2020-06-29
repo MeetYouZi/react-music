@@ -8,7 +8,7 @@ import { SongWrap, MainContent, ImageBg } from './style'
 import Lyric from './components/lyric'
 import ProgressBar from '@/components/progress/progressBar'
 import * as actionCreators from '@/store/actionCreators'
-import usePlayer from '@/components/hook/userPlayerHook'
+import usePlayer  from '@/components/hook/userPlayerHook'
 
 const PlaySong = props => {
 
@@ -25,8 +25,7 @@ const PlaySong = props => {
   const [ lyric, setLyric ] = useState([])
   const [ nolyric, setNolyric ] = useState(false)
   // 自定义组件
-  const [count, controlCount] = usePlayer(10)
-  console.log()
+  // const [count] = usePlayer(10)
 
   let percent = isNaN(currentTime / duration) ? 0 : currentTime / duration
 
@@ -135,4 +134,4 @@ const mapDispatchToProps = (dispatch) => ({
   }
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(PlaySong))
+export default connect(mapStateToProps, mapDispatchToProps)(React.memo(PlaySong))

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import {connect} from 'react-redux'
-import {withRouter} from 'react-router-dom'
 import * as actionCreators from '@/store/actionCreators'
 
 // 编写我们自己Hook，名字以use开头
@@ -40,4 +39,4 @@ const mapDispatchToProps = (dispatch) => ({
   }
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(usePlayer))
+export default connect(mapStateToProps, mapDispatchToProps)(usePlayer)

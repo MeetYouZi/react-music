@@ -20,4 +20,4 @@ const ProgressCircle = props => {
   )
 }
 
-export default ProgressCircle
+export default React.memo(ProgressCircle)

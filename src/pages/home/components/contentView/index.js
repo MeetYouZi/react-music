@@ -64,4 +64,4 @@ const ContentView = props => {
   )
 }
 
-export default ContentView
+export default React.memo(ContentView)

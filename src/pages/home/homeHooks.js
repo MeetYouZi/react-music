@@ -123,4 +123,4 @@ const mapDispatchToProps = (dispatch) => ({
 
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Home))
+export default connect(mapStateToProps, mapDispatchToProps)(React.memo(Home))

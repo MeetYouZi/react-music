@@ -1,5 +1,4 @@
 import React from 'react'
-import { withRouter } from 'react-router-dom'
 import { LyricWrap, LyricList, LyricItem } from './style'
 
 const Lyric = (props) => {
@@ -23,4 +22,4 @@ const Lyric = (props) => {
 
 }
 
-export default withRouter(Lyric)
+export default React.memo(Lyric)

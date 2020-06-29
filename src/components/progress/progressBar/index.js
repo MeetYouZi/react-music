@@ -1,5 +1,4 @@
 import React, {useEffect, useState, useRef} from 'react'
-import { connect } from 'react-redux'
 import { prefixStyle } from '@/utils/dom'
 import { ProgressBarWrap, BarInner } from './style'
 
@@ -91,4 +90,4 @@ const ProgressBar = props => {
 
 }
 
-export default ProgressBar
+export default React.memo(ProgressBar)

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { connect } from 'react-redux'
-import { useHistory, withRouter } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { getToplist } from '@/api'
 import { RankList, RankTitle, RankListTop } from './style'
 
@@ -76,5 +76,5 @@ const mapDispatchToProps = (dispatch) => ({
 
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Recommend))
+export default connect(mapStateToProps, mapDispatchToProps)(React.memo(Recommend))
 

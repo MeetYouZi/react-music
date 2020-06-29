@@ -3,8 +3,6 @@ import { PomeloPlay, Icon, Text, Control } from './style'
 import * as actionCreators from "@/store/actionCreators"
 import ProgressCircle from '@/components/progress/progressCircle'
 import { connect } from "react-redux"
-import { withRouter } from 'react-router-dom'
-
 
 const MiniPlayer = props => {
 
@@ -64,6 +62,5 @@ const mapDispatchToProps = (dispatch) => ({
 
 })
 
-
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(MiniPlayer))
+export default connect(mapStateToProps, mapDispatchToProps)(React.memo(MiniPlayer))
 
