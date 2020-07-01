@@ -4,8 +4,9 @@ import { parseLyric } from '@/utils/lyric'
 import formatSongs from '@/utils/song'
 import { connect } from 'react-redux'
 import { useParams, withRouter } from 'react-router-dom'
-import { SongWrap, MainContent, ImageBg } from './style'
+import { SongWrap, MainContent, ImageBg, SongComment } from './style'
 import Lyric from './components/lyric'
+import Comment from '@/components/comment'
 import ProgressBar from '@/components/progress/progressBar'
 import * as actionCreators from '@/store/actionCreators'
 import usePlayer  from '@/components/hook/userPlayerHook'
@@ -110,8 +111,10 @@ const PlaySong = props => {
           percentChange={percentChange}
           percent={percent}
         ></ProgressBar>
-
       </MainContent>
+      <SongComment>
+        <Comment/>
+      </SongComment>
     </SongWrap>
   )
 

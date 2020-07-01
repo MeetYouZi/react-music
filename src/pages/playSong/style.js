@@ -96,31 +96,45 @@ export const MainContent = styled.div`
 `
 
 export const ImageBg = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(to bottom, var(--bg-linear-gradient-1) 0, var(--bg-linear-gradient-2) 100%);
+  }
+  .bg_img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
-    &:after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      z-index: 0;
-      width: 100%;
-      height: 300px;
-      background-image: linear-gradient(to bottom, var(--bg-linear-gradient-1) 0, var(--bg-linear-gradient-2) 100%);
-    }
-    .bg_img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      opacity: 0.2;
-      transform: scale(1.2);
-      backdrop-filter: saturate(180%) blur(5px);
-      filter: blur(2px);
-    }
+    opacity: 0.2;
+    transform: scale(1.2);
+    backdrop-filter: saturate(180%) blur(5px);
+    filter: blur(2px);
+  }
+`
+
+export const SongComment = styled.div`
+  position: relative;
+  padding: 0 16px;
+  box-sizing: border-box;
+  .comment_tit {
+    height: 55px;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 55px;
+    color: var(--c_txt1);
+  }
 `
