@@ -10,7 +10,7 @@ export const CommentList = styled.ul`
   position: relative;
 `
 
-export const commentItem = styled.ul`
+export const CommentItem = styled.ul`
   display: flex;
   margin-top: 16px;
   .comment_item_avatar {
