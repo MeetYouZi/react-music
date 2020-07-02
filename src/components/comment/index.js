@@ -11,7 +11,7 @@ const Comment = props => {
       <CommentList>
         { hotCommentList.map(item => {
           return (
-            <CommentItem key={item.id}>
+            <CommentItem key={item.commentId}>
               <div className="comment_item_avatar">
                 <img src={`${item.user.avatarUrl}?param=50y50`}/>
               </div>

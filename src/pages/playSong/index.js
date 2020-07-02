@@ -113,7 +113,7 @@ const PlaySong = props => {
         ></ProgressBar>
       </MainContent>
       <SongComment>
-        <Comment hotCommentList={commentList}/>
+        <Comment commentList={commentList} hotCommentList={commentList}/>
       </SongComment>
     </SongWrap>
   )
