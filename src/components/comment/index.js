@@ -37,8 +37,6 @@ const Comment = props => {
       </CommentList>
     </>
   )
-
-
 }
 
 export default React.memo(Comment)

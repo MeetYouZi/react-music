@@ -3,7 +3,7 @@ import styled from 'styled-components'
 // import  * as mixins from 'style/mixins'
 
 export const MusicBanner = styled.div`
-	height: 154px;
+	height: 100%;
   margin: 0 16px;
   border-radius: 6px;
   overflow: hidden;
