@@ -4,7 +4,8 @@ import { parseLyric } from '@/utils/lyric'
 import formatSongs from '@/utils/song'
 import { connect } from 'react-redux'
 import { useParams, withRouter } from 'react-router-dom'
-import { SongWrap, MainContent, ImageBg, SongComment } from './style'
+import { formatTime } from '@/utils/utils'
+import { SongWrap, MainContent, ImageBg, SongComment, PlayProgressBar } from './style'
 import Lyric from './components/lyric'
 import Comment from '@/components/comment'
 import ProgressBar from '@/components/progress/progressBar'
@@ -107,10 +108,17 @@ const PlaySong = props => {
           }
           <Lyric lyric={lyric} nolyric={nolyric}/>
         </div>
-        <ProgressBar
-          percentChange={percentChange}
-          percent={percent}
-        ></ProgressBar>
+        <PlayProgressBar>
+          <p>{formatTime(currentTime)}</p>
+          <div className="progress_bar">
+            <ProgressBar
+              percentChange={percentChange}
+              percent={percent}
+            ></ProgressBar>
+        </div>
+        <p>{formatTime(currentSong.duration)}</p>
+        </PlayProgressBar>
+
       </MainContent>
       <SongComment>
         <Comment commentList={commentList} hotCommentList={commentList}/>

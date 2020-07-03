@@ -125,6 +125,25 @@ export const ImageBg = styled.div`
   }
 `
 
+export const PlayProgressBar = styled.div`
+  margin-top: 50px;
+  padding: 0px 16px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  p {
+    color: var(--c_txt2);
+    font-size: ${$fontSizeSmall};
+    width: 40px;
+    text-align: center;
+    padding: 0 6px;
+  }
+  .progress_bar {
+    flex: 1;
+  }
+`
+
 export const SongComment = styled.div`
   position: relative;
   padding: 0 16px;
