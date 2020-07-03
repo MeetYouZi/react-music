@@ -17,9 +17,8 @@ const Banner = props => {
           disableOnInteraction: false,
         },
         pagination: {el:'.swiper-pagination'},
-      });
-      console.log('0000');
-      setSliderSwiper(sliderSwiper);
+      })
+      setSliderSwiper(sliderSwiper)
     }
   }, [bannerList.length, sliderSwiper])
 
@@ -39,7 +38,7 @@ const Banner = props => {
             })
           }
         </div>
-        <div className="swiper-pagination"></div>
+        {/*<div className="swiper-pagination"></div>*/}
       </div>
     </MusicBanner>
   )

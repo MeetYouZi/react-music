@@ -18,8 +18,26 @@ const ContentView = props => {
   }
 
   const handleClick = (musicItem, item, index) => {
-    // props.onItemClick(item)
-    history.push(`/musicList/${item.id}`)
+    console.log(musicItem.key)
+    const key = musicItem.key
+    switch (key) {
+      case 'hot':
+        history.push(`/musicList/${item.id}`)
+        break
+      case 'musicList':
+        history.push(`/playSong/${item.id}`)
+        // this.playMusic(item, index)
+        break
+      case 'mv':
+        // this.playMV(item)
+        break
+      case 'program':
+        // this.handleToAlbum(item)
+        // this.playMV()
+        break
+      default:
+        console.log('啥也没有呢～')
+    }
   }
   return (
     <ContentViewBox>

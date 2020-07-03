@@ -11,6 +11,17 @@ export const SearchBar = styled.div`
   border-radius: 15px;
   background: ${variable.$searchBg};
   transition: width ease .3s;
+  .iconfont {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    margin-left: -32px;
+    color: var(--searchcolor);
+    font-size: 16px;
+    vertical-align: top;
+    transition: all .3s;
+  }
 `;
 
 export const SearchInput = styled.input`

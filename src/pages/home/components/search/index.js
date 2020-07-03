@@ -1,4 +1,3 @@
-// Profiler 收集组件渲染就是
 import React, { useState, useEffect } from 'react'
 import {SearchBar, SearchInput} from './style'
 
@@ -15,7 +14,7 @@ const Search = () => {
 
   return (
     <SearchBar>
-      <i className="iconfont iconsearch"></i>
+      <i className="iconfont">&#xe60c;</i>
       <SearchInput
         type="search"
         value={ query }
