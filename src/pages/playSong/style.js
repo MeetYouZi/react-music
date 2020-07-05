@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import  * as mixins from 'style/mixins'
-import {$fontSizeSmall, $fontSizeMedium, $fontSizeLarge} from 'style/variable'
+import {$fontSizeSmall, $fontSizeMedium, $fontSizeLarge, $fontSizeLargeM} from 'style/variable'
 
 export const SongWrap = styled.div`
 	background: var(--color_white);
@@ -149,7 +149,7 @@ export const SongComment = styled.div`
   box-sizing: border-box;
   .comment_tit {
     height: 55px;
-    font-size: 18px;
+    font-size: ${$fontSizeLargeM};
     font-weight: 400;
     text-align: center;
     line-height: 55px;

@@ -140,6 +140,7 @@ const PlaySong = props => {
         ></OptBar>
       </MainContent>
       <SongComment>
+        <div className="comment_tit">精选评论</div>
         <Comment commentList={commentList} hotCommentList={commentList}/>
       </SongComment>
     </SongWrap>
