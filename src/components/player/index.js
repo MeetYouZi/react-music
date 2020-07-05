@@ -28,10 +28,9 @@ const Player = props => {
     } else {
       audioRef.current.pause()
     }
-  }, [currentIndex, playList, playing])
+  }, [currentIndex, playList])
 
   useEffect(() =>{
-    audioRef.current.src = currentSong.url
     playing ? audioRef.current.play() : audioRef.current.pause()
   }, [playing])
 

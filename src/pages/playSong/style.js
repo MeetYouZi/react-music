@@ -8,7 +8,6 @@ export const SongWrap = styled.div`
 
 export const MainContent = styled.div`
   position: relative;
-  height: 300px;
   padding-bottom: 15px;
   overflow: hidden;
   z-index: 1;

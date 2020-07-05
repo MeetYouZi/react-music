@@ -10,6 +10,7 @@ import Lyric from './components/lyric'
 import Comment from '@/components/comment'
 import ProgressBar from '@/components/progress/progressBar'
 import * as actionCreators from '@/store/actionCreators'
+import OptBar from '@/pages/playSong/components/optBar'
 import usePlayer  from '@/components/hook/userPlayerHook'
 
 const PlaySong = props => {
@@ -90,6 +91,19 @@ const PlaySong = props => {
     }
   }
 
+  const prev = () => {
+
+  }
+
+  const next = () => {
+
+  }
+
+  const togglePlaying = () => {
+    console.log('00000')
+    setPlayingState(!playing)
+  }
+
   return (
     <SongWrap>
       <MainContent>
@@ -118,7 +132,12 @@ const PlaySong = props => {
         </div>
         <p>{formatTime(currentSong.duration)}</p>
         </PlayProgressBar>
-
+        <OptBar
+          playing={playing}
+          prev={prev}
+          next={next}
+          togglePlaying={togglePlaying}
+        ></OptBar>
       </MainContent>
       <SongComment>
         <Comment commentList={commentList} hotCommentList={commentList}/>
