@@ -38,13 +38,13 @@ const OptBar = props => {
 
   return (
     <OptWrap>
-      <div className="opt_item" onClick={() => changeMode}>
+      <div className="opt_item" onClick={() => changeMode()}>
         <i className="iconfont">
           &#xe622;
           {/*{iconMode}*/}
         </i>
       </div>
-      <div className="opt_item" onClick={() => prev}>
+      <div className="opt_item" onClick={() => prev()}>
         <i className="iconfont iconshangyiqu101">&#xe6e1;</i>
       </div>
       <div className="opt_item icon-mini" onClick={() => togglePlaying()}>
@@ -52,10 +52,10 @@ const OptBar = props => {
           playing ? <IconPause/> : <IconPlay/>
         }
       </div>
-      <div className="opt_item" onClick={() => next}>
+      <div className="opt_item" onClick={() => next()}>
         <i className="iconfont">&#xe718;</i>
       </div>
-      <div className="opt_item" onClick={() => togglePlaying}>
+      <div className="opt_item" onClick={() => togglePlaying()}>
         <i className="iconfont">&#xe77c;</i>
       </div>
     </OptWrap>

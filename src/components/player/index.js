@@ -9,7 +9,7 @@ import MiniPlayer from './miniPlayer'
 const Player = props => {
   const [ duration, setDuration ] = useState(0)
   const { currentSong, playing, currentIndex, playList, currentTime } = props
-  const { setPlayingState, setAudioELE, setCurrentTime } = props
+  const { setPlayingState, setAudioELE, setCurrentTime, setCurrentIndex, setCurrentSong } = props
 
   const audioRef = useRef()
   let percent = isNaN(currentTime / duration) ? 0 : currentTime / duration
@@ -28,7 +28,14 @@ const Player = props => {
     } else {
       audioRef.current.pause()
     }
-  }, [currentIndex, playList])
+  }, [currentSong, playList])
+
+  useEffect(() => {
+    if (playList.length) {
+      let currentSong = playList[currentIndex]
+      setCurrentSong(currentSong)
+    }
+  }, [currentIndex])
 
   useEffect(() =>{
     playing ? audioRef.current.play() : audioRef.current.pause()
@@ -66,7 +73,9 @@ const Player = props => {
   return (
     <PlayerWarp>
       {/*<ProgressBar percent={percent} percentChange={percentChange}/>*/}
-      <MiniPlayer percent={percent}/>
+      {
+        playing ? <MiniPlayer percent={percent}/> : ''
+      }
       <audio
         ref={audioRef}
         onTimeUpdate={updateTime}
@@ -98,6 +107,14 @@ const mapDispatchToProps = (dispatch) => ({
 
   setCurrentTime(current_time) {
     dispatch(actionCreators.setCurrentTime(current_time))
+  },
+
+  setCurrentIndex(index) {
+    dispatch(actionCreators.setCurrentIndex(index))
+  },
+
+  setCurrentSong(currentSong) {
+    dispatch(actionCreators.setCurrentSong(currentSong))
   }
 })
 

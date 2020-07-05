@@ -17,8 +17,8 @@ const PlaySong = props => {
 
   let { id } = useParams()
 
-  const { audioELE, currentSong, playing, currentTime } = props
-  const { setPlayingState, setCurrentTime } = props
+  const { audioELE, currentSong, playing, currentTime, currentIndex, playList } = props
+  const { setPlayingState, setCurrentTime, setCurrentIndex, setPlayList, setCurrentSong } = props
 
   const [ duration, setDuration ] = useState(0)
   const [ songList, setSongList ] = useState([])
@@ -41,7 +41,7 @@ const PlaySong = props => {
     _getSongDetail(id)
     _getCommentList(id)
     _getLyric(id)
-  }, [id])
+  }, [id, currentSong])
 
   // 获取歌词
   const _getLyric = (id) => {
@@ -55,24 +55,25 @@ const PlaySong = props => {
       // silencePromise(this.audioEle.play())
     })
   }
+
+  const isPlaying = (list) => {
+    const index = list.findIndex((item) => {
+      return item.id === currentSong.id
+    })
+    return index > -1
+  }
+
   const _getSongDetail = (id) => {
     getSongDetail(id).then(res => {
       const songsList = formatSongs(res.songs)
       setSongList(songsList)
       setSongs(songsList[0])
-      // document.title = this.currentSong.name
-      // if (!this.isplaying(this.songList)) {
-      //   this.selectPlay({
-      //     list: this.songList,
-      //     index: 0
-      //   })
-      // }
-      // setTimeout(() => {
-      //   this.selectPlay({
-      //     list: this.songList,
-      //     index: 0
-      // }, 1000)
-      // })
+      if (!isPlaying(songList)) {
+        setPlayList(songList)
+        setCurrentIndex(0)
+        setCurrentSong(songs)
+      }
+      document.title = currentSong.name
     })
   }
   const _getCommentList = (id) => {
@@ -92,16 +93,44 @@ const PlaySong = props => {
   }
 
   const prev = () => {
-
+    console.log('prev')
+    let index = currentIndex - 1
+    if (index === -1) {
+      index = playList.length - 1
+    }
+    setCurrentIndex(index)
+    if (!playing) {
+      togglePlaying()
+    }
   }
 
   const next = () => {
-
+    const playListLength = playList.length
+    console.log(playListLength, 'playListLength')
+    if (playListLength === 1) {
+      return loop()
+    }
+    let index = 0
+    if (currentIndex === playListLength - 1) {
+      index = 0
+    } else {
+      index = currentIndex + 1
+    }
+    setCurrentIndex(index)
+    console.log(playListLength,index, 'next')
+    if (!playing) {
+      togglePlaying()
+    }
   }
 
   const togglePlaying = () => {
-    console.log('00000')
     setPlayingState(!playing)
+  }
+
+  const loop = () => {
+    audioELE.current.currentTime = 0
+    audioELE.current.play()
+    setPlayingState(true)
   }
 
   return (
@@ -152,7 +181,9 @@ const mapStateToProps = (state) => ({
   audioELE: state.audioELE,
   currentSong: state.currentSong,
   playing: state.playing,
-  currentTime: state.currentTime
+  currentTime: state.currentTime,
+  currentIndex: state.currentIndex,
+  playList: state.playList
 })
 
 const mapDispatchToProps = (dispatch) => ({
@@ -162,6 +193,18 @@ const mapDispatchToProps = (dispatch) => ({
 
   setCurrentTime(current_time) {
     dispatch(actionCreators.setCurrentTime(current_time))
+  },
+
+  setCurrentIndex(index) {
+    dispatch(actionCreators.setCurrentIndex(index))
+  },
+
+  setPlayList(list) {
+    dispatch(actionCreators.setPlayList(list))
+  },
+
+  setCurrentSong(song) {
+    dispatch(actionCreators.setCurrentSong(song))
   }
 })
 
