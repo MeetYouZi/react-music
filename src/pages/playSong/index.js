@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useMemo} from 'react'
 import { getLyricl, getSongDetail, getCommentList } from '@/api'
 import { parseLyric } from '@/utils/lyric'
 import formatSongs from '@/utils/song'
@@ -33,9 +33,15 @@ const PlaySong = props => {
   let percent = isNaN(currentTime / duration) ? 0 : currentTime / duration
 
   useEffect(() => {
+    console.log(currentSong, 'currentSong')
     setDuration(currentSong.duration)
     audioELE.current.src = currentSong.url
-  }, [currentSong])
+  }, [currentSong, ])
+
+  // useMemo
+  const currentSongs = useMemo(() => {
+    return playList[currentIndex]
+  }, [currentIndex, playList])
 
   useEffect( () => {
     _getSongDetail(id)
@@ -58,7 +64,7 @@ const PlaySong = props => {
 
   const isPlaying = (list) => {
     const index = list.findIndex((item) => {
-      return item.id === currentSong.id
+      return item.id == currentSong.id
     })
     return index > -1
   }
@@ -68,8 +74,8 @@ const PlaySong = props => {
       const songsList = formatSongs(res.songs)
       setSongList(songsList)
       setSongs(songsList[0])
-      if (!isPlaying(songList)) {
-        setPlayList(songList)
+      if (!isPlaying(songsList)) {
+        setPlayList(songsList)
         setCurrentIndex(0)
         setCurrentSong(songs)
       }
