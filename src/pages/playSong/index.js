@@ -11,7 +11,7 @@ import Comment from '@/components/comment'
 import ProgressBar from '@/components/progress/progressBar'
 import * as actionCreators from '@/store/actionCreators'
 import OptBar from '@/pages/playSong/components/optBar'
-import usePlayer  from '@/components/hook/userPlayerHook'
+import usePlayer from '@/components/hook/usePlayerHook'
 
 const PlaySong = props => {
 
@@ -28,15 +28,14 @@ const PlaySong = props => {
   const [ lyric, setLyric ] = useState([])
   const [ nolyric, setNolyric ] = useState(false)
   // 自定义组件
-  // const [count] = usePlayer(10)
+  const [isPlaying, { loop, togglePlaying, prev, next }] = usePlayer(props)
 
   let percent = isNaN(currentTime / duration) ? 0 : currentTime / duration
 
   useEffect(() => {
-    console.log(currentSong, 'currentSong')
     setDuration(currentSong.duration)
     audioELE.current.src = currentSong.url
-  }, [currentSong, ])
+  }, [currentSong])
 
   // useMemo
   const currentSongs = useMemo(() => {
@@ -60,13 +59,6 @@ const PlaySong = props => {
       }
       // silencePromise(this.audioEle.play())
     })
-  }
-
-  const isPlaying = (list) => {
-    const index = list.findIndex((item) => {
-      return item.id == currentSong.id
-    })
-    return index > -1
   }
 
   const _getSongDetail = (id) => {
@@ -96,47 +88,6 @@ const PlaySong = props => {
     if (!playing) {
       setPlayingState(true)
     }
-  }
-
-  const prev = () => {
-    console.log('prev')
-    let index = currentIndex - 1
-    if (index === -1) {
-      index = playList.length - 1
-    }
-    setCurrentIndex(index)
-    if (!playing) {
-      togglePlaying()
-    }
-  }
-
-  const next = () => {
-    const playListLength = playList.length
-    console.log(playListLength, 'playListLength')
-    if (playListLength === 1) {
-      return loop()
-    }
-    let index = 0
-    if (currentIndex === playListLength - 1) {
-      index = 0
-    } else {
-      index = currentIndex + 1
-    }
-    setCurrentIndex(index)
-    console.log(playListLength,index, 'next')
-    if (!playing) {
-      togglePlaying()
-    }
-  }
-
-  const togglePlaying = () => {
-    setPlayingState(!playing)
-  }
-
-  const loop = () => {
-    audioELE.current.currentTime = 0
-    audioELE.current.play()
-    setPlayingState(true)
   }
 
   return (
