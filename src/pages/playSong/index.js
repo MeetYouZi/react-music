@@ -28,25 +28,26 @@ const PlaySong = props => {
   const [ lyric, setLyric ] = useState([])
   const [ nolyric, setNolyric ] = useState(false)
   // 自定义组件
-  const [isPlaying, { loop, togglePlaying, prev, next }] = usePlayer(props)
+  const [isPlaying, { loop, togglePlaying }] = usePlayer(props)
 
   let percent = isNaN(currentTime / duration) ? 0 : currentTime / duration
 
-  useEffect(() => {
-    setDuration(currentSong.duration)
-    audioELE.current.src = currentSong.url
-  }, [currentSong])
-
-  // useMemo
+  // useMemo 可当作计算属性使用
   const currentSongs = useMemo(() => {
     return playList[currentIndex]
   }, [currentIndex, playList])
+
+  useEffect(() => {
+    if (!currentSongs) return
+    setDuration(currentSong.duration)
+    audioELE.current.src = currentSong.url
+  }, [currentSong])
 
   useEffect( () => {
     _getSongDetail(id)
     _getCommentList(id)
     _getLyric(id)
-  }, [id, currentSong])
+  }, [id, currentSongs])
 
   // 获取歌词
   const _getLyric = (id) => {
@@ -87,6 +88,35 @@ const PlaySong = props => {
     audioELE.current.currentTime = newTime
     if (!playing) {
       setPlayingState(true)
+    }
+  }
+
+  const prev = () => {
+    let index = currentIndex - 1
+    if (index === -1) {
+      index = playList.length - 1
+    }
+    setCurrentIndex(index)
+    if (!playing) {
+      togglePlaying()
+    }
+  }
+
+  const next = () => {
+    const playListLength = playList.length
+    console.log(playListLength, 'playListLength', currentIndex)
+    if (playListLength === 1) {
+      return loop()
+    }
+    let index = 0
+    if (currentIndex === playListLength - 1) {
+      index = 0
+    } else {
+      index = currentIndex + 1
+    }
+    setCurrentIndex(index)
+    if (!playing) {
+      togglePlaying()
     }
   }
 

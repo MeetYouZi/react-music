@@ -17,35 +17,6 @@ const usePlayer = (props) => {
     setPlayingState(!playing)
   }
 
-  const prev = () => {
-    let index = currentIndex - 1
-    if (index === -1) {
-      index = playList.length - 1
-    }
-    setCurrentIndex(index)
-    if (!playing) {
-      togglePlaying()
-    }
-  }
-
-  const next = () => {
-    const playListLength = playList.length
-    console.log(playListLength, 'playListLength', currentIndex)
-    if (playListLength === 1) {
-      return loop()
-    }
-    let index = 0
-    if (currentIndex === playListLength - 1) {
-      index = 0
-    } else {
-      index = currentIndex + 1
-    }
-    setCurrentIndex(index)
-    if (!playing) {
-      togglePlaying()
-    }
-  }
-
   const isPlaying = (list) => {
     const index = list.findIndex((item) => {
       return item.id == currentSong.id
@@ -54,7 +25,7 @@ const usePlayer = (props) => {
   }
 
   // 返回包含了更多逻辑的 state 以及改变 state 方法的钩子
-  return [isPlaying, { loop, togglePlaying, prev, next }]
+  return [isPlaying, { loop, togglePlaying }]
 }
 
 export default usePlayer
