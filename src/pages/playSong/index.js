@@ -23,6 +23,7 @@ const PlaySong = props => {
   const [ duration, setDuration ] = useState(0)
   const [ songList, setSongList ] = useState([])
   const [ songs, setSongs ] = useState({})
+  const [ currentSongs, setCurrentSongs ] = useState({})
   const [ commentList, setCommentList ] = useState([])
   const [ hotCommentList, setHotCommentList ] = useState([])
   const [ lyric, setLyric ] = useState([])
@@ -33,9 +34,13 @@ const PlaySong = props => {
   let percent = isNaN(currentTime / duration) ? 0 : currentTime / duration
 
   // useMemo 可当作计算属性使用
-  const currentSongs = useMemo(() => {
-    return playList[currentIndex]
+  useMemo(() => {
+    let currentSongs = playList[currentIndex]
+    setCurrentSongs(currentSongs)
+    console.log(currentSongs, 'currentSongs')
   }, [currentIndex, playList])
+
+
 
   useEffect(() => {
     if (!currentSongs) return
@@ -47,7 +52,13 @@ const PlaySong = props => {
     _getSongDetail(id)
     _getCommentList(id)
     _getLyric(id)
-  }, [id, currentSongs])
+  }, [id])
+
+  useEffect( () => {
+    _getSongDetail(currentSong.id)
+    _getCommentList(currentSong.id)
+    _getLyric(currentSong.id)
+  }, [currentSong])
 
   // 获取歌词
   const _getLyric = (id) => {
@@ -67,11 +78,11 @@ const PlaySong = props => {
       const songsList = formatSongs(res.songs)
       setSongList(songsList)
       setSongs(songsList[0])
-      if (!isPlaying(songsList)) {
-        setPlayList(songsList)
-        setCurrentIndex(0)
-        setCurrentSong(songs)
-      }
+      // if (!isPlaying(songsList)) {
+      //   setPlayList(songsList)
+      //   setCurrentIndex(0)
+      //   setCurrentSong(songs)
+      // }
       document.title = currentSong.name
     })
   }
