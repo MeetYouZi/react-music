@@ -33,6 +33,9 @@ const PlaySong = props => {
   let percent = isNaN(currentTime / duration) ? 0 : currentTime / duration
 
   // useMemo 可当作计算属性使用
+  useMemo(() => {
+    setDuration(currentSong.duration)
+  }, [currentSong])
   // useMemo(() => {
   //   let currentSongs = playList[currentIndex]
   //   setCurrentSongs(currentSongs)
@@ -45,12 +48,13 @@ const PlaySong = props => {
     _getLyric(id)
   }, [id])
 
+
+
   useEffect( () => {
     if (!currentSong.id || id == currentSong.id) return
     _getSongDetail(currentSong.id)
     _getCommentList(currentSong.id)
     _getLyric(currentSong.id)
-    setDuration(currentSong.duration)
   }, [currentSong])
 
   // 获取歌词
@@ -88,6 +92,7 @@ const PlaySong = props => {
 
   const percentChange = curPercent => {
     const newTime = curPercent * duration
+    console.log(newTime, curPercent, duration, 'newTime')
     setCurrentTime(newTime)
     audioELE.current.currentTime = newTime
     if (!playing) {
@@ -108,7 +113,6 @@ const PlaySong = props => {
 
   const next = () => {
     const playListLength = playList.length
-    console.log(playListLength, 'playListLength', currentIndex)
     if (playListLength === 1) {
       return loop()
     }
