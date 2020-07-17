@@ -23,7 +23,6 @@ const PlaySong = props => {
   const [ duration, setDuration ] = useState(0)
   const [ songList, setSongList ] = useState([])
   const [ songs, setSongs ] = useState({})
-  const [ currentSongs, setCurrentSongs ] = useState({})
   const [ commentList, setCommentList ] = useState([])
   const [ hotCommentList, setHotCommentList ] = useState([])
   const [ lyric, setLyric ] = useState([])
@@ -40,12 +39,6 @@ const PlaySong = props => {
   //   console.log(currentSongs, 'currentSongs')
   // }, [currentIndex, playList])
 
-  useEffect(() => {
-    if (!currentSongs) return
-    setDuration(currentSong.duration)
-    audioELE.current.src = currentSong.url
-  }, [currentSong])
-
   useEffect( () => {
     _getSongDetail(id)
     _getCommentList(id)
@@ -53,10 +46,11 @@ const PlaySong = props => {
   }, [id])
 
   useEffect( () => {
-    if (!currentSong.id) return
+    if (!currentSong.id || id == currentSong.id) return
     _getSongDetail(currentSong.id)
     _getCommentList(currentSong.id)
     _getLyric(currentSong.id)
+    setDuration(currentSong.duration)
   }, [currentSong])
 
   // 获取歌词
