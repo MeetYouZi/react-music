@@ -13,9 +13,9 @@ const ContentView = props => {
 
   const history = useHistory()
 
-  const _getImgUrl = (url, w, h) => {
-    return getImgUrl(url, w, h)
-  }
+  // const _getImgUrl = (url, w, h) => {
+  //   return getImgUrl(url, w, h)
+  // }
 
   const handleClick = (musicItem, item, index) => {
     console.log(musicItem.key)
@@ -58,7 +58,7 @@ const ContentView = props => {
                         onClick={() => handleClick(musicItem, item, index)}>
                         <div className="list-box">
                           <div className="list-media">
-                            <img className="list-img" src={_getImgUrl(item.picUrl, 120)}/>
+                            <img className="list-img" src={getImgUrl(item.picUrl, 120)}/>
                               {
                                 item.playCount ? <div className="cover_count"><span className="cover-count-num">
                                   { item.playCount / 10000 }万</span></div> : ''

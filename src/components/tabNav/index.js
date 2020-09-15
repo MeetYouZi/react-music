@@ -8,17 +8,17 @@ const TabNav = props => {
     {
       id: '001',
       url: '/',
-      icon: 'iconmusic1',
+      icon: `&#xe6d1;`,
       name: '音乐馆'
     }, {
       id: '002',
       url: '/recommend',
-      icon: 'iconpaihang',
+      icon: `&#xe638;`,
       name: '排行'
     }, {
       id: '003',
       url: '/personal',
-      icon: 'iconMy',
+      icon: `&#xe615;`,
       name: '我的'
     }
   ]
@@ -30,6 +30,7 @@ const TabNav = props => {
         return (
           <NavLink to={item.url} exact activeClassName="LinkActive" key={index}>
             <TabItem>
+              <i className="iconfont">&#xe638;</i>
               <span className="TabLink">{item.name}</span>
             </TabItem>
           </NavLink>

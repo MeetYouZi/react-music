@@ -32,9 +32,13 @@ const OptWrap = styled.div`
 
 const OptBar = props => {
 
-  const { iconMode, changeMode } = props
+  const { iconMode } = props
   const { prev, next, togglePlaying } = props
   const { playing } = props
+
+  const changeMode = () => {
+
+  }
 
   return (
     <OptWrap>

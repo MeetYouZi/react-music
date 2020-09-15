@@ -1,4 +1,5 @@
 import React from 'react'
+import { dateFormat } from '@/utils/format'
 
 import { CommentList, CommentItem } from './style'
 
@@ -19,11 +20,11 @@ const Comment = props => {
                 <div className="comment_header">
                   <div className="header_left">
                     <p className="nickname">{item.user.nickname}</p>
-                    <p className="time">{item.time}</p>
+                    <p className="time">{dateFormat(new Date(item.time), 'yyyy-MM-dd hh:mm')}</p>
                   </div>
                   <div className="header_right">
                     <span className="likeNum">{item.likedCount}</span>
-                    <i className="iconfont icondianzan"></i>
+                    <i className="iconfont">&#xe694;</i>
                   </div>
                 </div>
                 <div className="comment_desc">
