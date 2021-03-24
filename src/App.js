@@ -1,15 +1,14 @@
 import React, { lazy, Suspense } from 'react'
 import { Provider } from 'react-redux';
+import { renderRoutes } from 'react-router-config';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import store from './store'
 import { GlobalStyle } from './style'
 import { IconStyle } from 'style/iconfonts/iconfont'
 import Player from '@/components/player'
-const MusicList = lazy(() => import('@/pages/musicList'))
-const Home = lazy(() => import('@/pages/home/homeHooks'))
+import router from './router/index';
+
 const TabNav= lazy(() => import('@/components/tabNav'))
-const Recommend = lazy(() => import('@/pages/recommend'))
-const PlaySong = lazy(() => import('@/pages/playSong'))
 
 function App() {
   return (
@@ -19,12 +18,7 @@ function App() {
       <BrowserRouter>
         <Suspense fallback={<div>loading</div>}>
           <TabNav/>
-          <Switch>
-            <Route path='/' exact component={Home}/>
-            <Route path='/musicList/:id' exact component={MusicList}/>
-            <Route path='/recommend' exact component={Recommend}/>
-            <Route path='/playSong/:id' exact component={PlaySong}/>
-          </Switch>
+          { renderRoutes(router) }
           <Player></Player>
         </Suspense>
       </BrowserRouter>
