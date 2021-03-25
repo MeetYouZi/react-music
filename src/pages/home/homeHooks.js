@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import {connect} from 'react-redux'
-import { withRouter } from 'react-router-dom'
 import { getBanner, getPersonalized, getNewSongs, getPersonalizedMv, getDjprogram } from '@/api'
 import formatSongs from '@/utils/song'
 import Search from '@/pages/home/components/search'

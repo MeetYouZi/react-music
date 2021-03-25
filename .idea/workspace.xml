@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c25770b-cdad-4ec2-b025-87d16bc1adea" name="Default Changelist" comment="添加推荐数据接口请求">
+      <change afterPath="$PROJECT_DIR$/src/pages/personal/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/personal/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tabNav/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tabNav/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/player/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/player/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/homeHooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/homeHooks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +20,8 @@
       <list>
         <option value="CSS File" />
         <option value="XSLT Stylesheet" />
-        <option value="JavaScript File" />
         <option value="Stylus File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -104,7 +108,7 @@
       <workItem from="1591459311493" duration="121000" />
       <workItem from="1591459587910" duration="932000" />
       <workItem from="1591501926839" duration="47791000" />
-      <workItem from="1616570433282" duration="254000" />
+      <workItem from="1616570433282" duration="3885000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1591538146260</created>
@@ -148,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592145315481</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat: 添加路由管理 react-router-config">
+      <created>1616570972927</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1616570972928</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,44 +182,7 @@
     <MESSAGE value="添加路由底部导航，style-components 太难了！！！" />
     <MESSAGE value="添加推荐数据接口请求" />
     <MESSAGE value="添加推荐页面UI，添加 Suspense 虚拟组件" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加推荐页面UI，添加 Suspense 虚拟组件" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591519676616">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1591519676616" />
-    <state x="318" y="23" width="816" height="800" key="CommitChangelistDialog2" timestamp="1592145314909">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="318" y="23" width="816" height="800" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1592145314909" />
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1592138300837">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1592138300837" />
-    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1592138300835">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1592138300835" />
-    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1592138300834">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1592138300834" />
-    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1592138300836">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1592138300836" />
-    <state x="371" y="70" key="SettingsEditor" timestamp="1591713758929">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="371" y="70" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1591713758929" />
-    <state x="509" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592137862056">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="509" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1592137862056" />
-    <state x="384" y="207" width="671" height="486" key="find.popup" timestamp="1592231806262">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="384" y="207" width="671" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1592231806262" />
+    <MESSAGE value="feat: 添加路由管理 react-router-config" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 添加路由管理 react-router-config" />
   </component>
 </project>
