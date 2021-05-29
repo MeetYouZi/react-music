@@ -3923,9 +3923,9 @@ dns-equal@^1.0.0:
   integrity sha1-s55/HabrCnW6nBcySzR1PEfgZU0=
 
 dns-packet@^1.3.1:
-  version "1.3.1"
-  resolved "http://172.26.59.72:4873/dns-packet/-/dns-packet-1.3.1.tgz#12aa426981075be500b910eedcd0b47dd7deda5a"
-  integrity sha1-EqpCaYEHW+UAuRDu3NC0fdfe2lo=
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/dns-packet/-/dns-packet-1.3.4.tgz#e3455065824a2507ba886c55a89963bb107dec6f"
+  integrity sha512-BQ6F4vycLXBvdrJZ6S3gZewt6rcrks9KBgM9vrhW+knGRqc8uEdT7fuCwloc7nny5xNoMJ17HGH0R/6fpo8ECA==
   dependencies:
     ip "^1.1.0"
     safe-buffer "^5.0.1"
@@ -9031,6 +9031,13 @@ react-redux@^7.2.0:
     loose-envify "^1.4.0"
     prop-types "^15.7.2"
     react-is "^16.13.1"
+
+react-router-config@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/react-router-config/-/react-router-config-5.1.1.tgz#0f4263d1a80c6b2dc7b9c1902c9526478194a988"
+  integrity sha512-DuanZjaD8mQp1ppHjgnnUnyOlqYXZVjnov/JzFhjLEwd3Z4dYjMSnqrEzzGThH47vpCOqPPwJM2FtthLeJ8Pbg==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
 
 react-router-dom@^5.2.0:
   version "5.2.0"
